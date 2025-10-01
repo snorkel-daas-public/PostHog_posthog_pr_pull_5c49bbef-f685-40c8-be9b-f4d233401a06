@@ -152,7 +152,7 @@ jobs:
 
             - name: Set up Python
               if: needs.changes.outputs.rust == 'true'
-              uses: actions/setup-python@v5
+              uses: actions/setup-python@v6
               with:
                   python-version-file: 'pyproject.toml'
                   token: ${{ secrets.POSTHOG_BOT_GITHUB_TOKEN }}
