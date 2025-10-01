@@ -114,7 +114,7 @@ jobs:
                   docker compose -f docker-compose.dev.yml up -d &
 
             - name: Set up Python
-              uses: actions/setup-python@v5
+              uses: actions/setup-python@v6
               with:
                   python-version: 3.11.13
                   token: ${{ secrets.POSTHOG_BOT_GITHUB_TOKEN }}
@@ -507,7 +507,7 @@ jobs:
 
             - name: Set up Python
               if: ${{ needs.changes.outputs.backend == 'true' }}
-              uses: actions/setup-python@v5
+              uses: actions/setup-python@v6
               with:
                   python-version: ${{ matrix.python-version }}
                   token: ${{ secrets.POSTHOG_BOT_GITHUB_TOKEN }}
@@ -786,7 +786,7 @@ jobs:
                   docker compose -f docker-compose.dev.yml up -d &
 
             - name: Set up Python
-              uses: actions/setup-python@v5
+              uses: actions/setup-python@v6
               with:
                   python-version-file: 'pyproject.toml'
                   token: ${{ secrets.POSTHOG_BOT_GITHUB_TOKEN }}

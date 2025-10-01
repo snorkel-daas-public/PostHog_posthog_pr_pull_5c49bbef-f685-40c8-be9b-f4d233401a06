@@ -62,7 +62,7 @@ jobs:
                   fetch-depth: 1
 
             - name: Set up Python
-              uses: actions/setup-python@v5
+              uses: actions/setup-python@v6
               if: needs.changes.outputs.python == 'true'
               with:
                   python-version: 3.11.13
